@@ -1,9 +1,12 @@
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 
 export default function LoginScreen() {
   return (
     <View className="flex flex-col justify-center items-center w-full">
-      <View className="flex flex-col gap-2 w-full"></View>
+      <Text>LoginScreen</Text>
+      <Text>LoginScreen</Text>
+      <Text>LoginScreen</Text>
+      <Text>LoginScreen</Text>
     </View>
   );
 }
