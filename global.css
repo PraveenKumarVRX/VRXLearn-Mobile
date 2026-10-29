@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*@layer components {
+  .video-player {
+    @apply flex items-center justify-center rounded-full bg-black/50 h-7 md:h-10;
+  }
+}*/
