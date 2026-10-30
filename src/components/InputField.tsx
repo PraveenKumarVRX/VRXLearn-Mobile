@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Text, TextInput, TouchableOpacity, View } from 'react-native';
-import AntDesign from 'react-native-vector-icons/AntDesign';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import Entypo from 'react-native-vector-icons/Entypo';
 
 function InputField({
   name,
@@ -28,7 +29,7 @@ function InputField({
         }`}
       >
         {/* Left Icon */}
-        <AntDesign name={icon} size={22} color="#333" />
+        <MaterialIcons name={icon} size={22} color="#333" />
 
         {/* Text Input */}
         <TextInput
@@ -44,10 +45,10 @@ function InputField({
         {/* Password Eye Icon */}
         {isPassword && (
           <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
-            <AntDesign
-              name={showPassword ? 'eye' : 'eye-invisible'}
-              size={22}
+            <Entypo
+              name={showPassword ? 'eye' : 'eye-with-line'}
               color="#333"
+              size={22}
             />
           </TouchableOpacity>
         )}
