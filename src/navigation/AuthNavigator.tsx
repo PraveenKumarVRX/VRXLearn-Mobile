@@ -13,16 +13,24 @@ const AuthStack = createNativeStackNavigator();
 export default function AuthNavigator() {
   return (
     <AuthLayout>
-      <AuthStack.Navigator initialRouteName="Login">
+      <AuthStack.Navigator
+        initialRouteName="Login"
+        screenOptions={{
+          headerShown: false,
+          contentStyle: {
+            backgroundColor: 'transparent',
+          },
+        }}
+      >
         <AuthStack.Screen
           name="Login"
           component={LoginScreen}
-          options={{ headerShown: false }}
+          // options={{ headerShown: false }}
         />
         <AuthStack.Screen
           name="Register"
           component={RegisterScreen}
-          options={{ title: 'Create Account' }}
+          // options={{ title: 'Create Account' }}
         />
       </AuthStack.Navigator>
     </AuthLayout>

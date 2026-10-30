@@ -1,33 +1,97 @@
-import { Image, Text, View } from 'react-native';
+import { Alert, Image, Linking, Pressable, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+// icon imports
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+
+// Types
 type AuthLayoutProps = {
   children: React.ReactNode;
 };
 
+// Social connect details
+const socialLinks = [
+  {
+    key: 'web',
+    name: 'Website',
+    label: () => (
+      <MaterialCommunityIcons name="web" color="#737062" size={30} />
+    ),
+    navlink: 'https://vrnexgen1.com/',
+  },
+  {
+    key: 'linkedin',
+    name: 'LinkedIn',
+    label: () => (
+      <MaterialCommunityIcons name="linkedin" color="#0A66C2" size={30} />
+    ),
+    navlink: 'https://www.linkedin.com/company/vrnexgen/',
+  },
+  {
+    key: 'youtube',
+    name: 'YouTube',
+    label: () => <AntDesign name="youtube" color="#FF0000" size={30} />,
+    navlink: 'https://www.youtube.com/@VRNeXGen1/',
+  },
+  {
+    key: 'GitHub',
+    name: 'GitHub',
+    label: () => (
+      <MaterialCommunityIcons name="phone-classic" color="#737062" size={28} />
+    ),
+    navlink: 'tel:+919876543210',
+  },
+];
+
 function AuthLayout({ children }: AuthLayoutProps) {
+  // Open Social linkes function
+  async function openSocialLinks(url: string) {
+    try {
+      await Linking.openURL(url);
+    } catch {
+      Alert.alert('Unable to open link', 'Please try again later.');
+    }
+  }
   return (
     <SafeAreaView className="flex-1 bg-white dark:bg-slate-900">
-      <View className="flex-1 items-center justify-center px-4">
-        <View className="w-full max-w-md items-center">
-          <Image
-            source={require('../../assets/logos/logo.png')}
-            resizeMode="contain"
-            className="mb-4 h-16 w-16"
-          />
+      <View className="flex-1 items-center px-4">
+        <View className="w-full max-w-md flex-1 items-center">
+          {/* Header */}
+          <View className="items-center pt-6">
+            <Image
+              source={require('../../assets/logos/logo.png')}
+              resizeMode="contain"
+              className="h-28 w-28"
+            />
 
-          <Text className="mb-6 text-center text-2xl font-bold text-slate-900 dark:text-white">
-            Welcome Back!
-          </Text>
-          <View className="w-full rounded-2xl">{children}</View>
-          {/* Social media section */}
-          <View className="mt-10 w-full items-center">
-            <Text className="mb-4 text-xs text-slate-500 dark:text-slate-400">
+            <Text className="mb-6 mt-4 text-center text-4xl font-bold text-slate-900 dark:text-white">
+              Welcome Back!
+            </Text>
+          </View>
+
+          {/* Dynamic screen content that renders all the auth screens eg. login, singUp, etc.. */}
+          <View className="w-full flex-1">{children}</View>
+
+          {/* Footer that renders the Connect with us Icons */}
+          <View className="w-full items-center py-5">
+            <Text className="mb-4 text-sm text-slate-500 dark:text-slate-400">
               Connect with us
             </Text>
 
             <View className="flex-row items-center justify-center gap-5">
-              {/* Add your actual social icon components here */}
+              {socialLinks.map(social => (
+                <Pressable
+                  key={social.key}
+                  accessibilityRole="link"
+                  accessibilityLabel={social.name}
+                  onPress={() => openSocialLinks(social.navlink)}
+                  className="h-12 w-12 items-center justify-center rounded-full border border-slate-200"
+                >
+                  {social.label}
+                </Pressable>
+              ))}
             </View>
           </View>
         </View>
