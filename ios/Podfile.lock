@@ -1421,6 +1421,20 @@ PODS:
     - ReactCommon/turbomodule/core
     - ReactNativeDependencies
     - Yoga
+  - react-native-vector-icons-ant-design (14.0.0)
+  - react-native-vector-icons-entypo (14.0.0)
+  - react-native-vector-icons-evil-icons (14.0.0)
+  - react-native-vector-icons-feather (14.0.0)
+  - react-native-vector-icons-fontawesome (14.0.0)
+  - react-native-vector-icons-fontisto (14.0.0)
+  - react-native-vector-icons-foundation (14.0.0)
+  - react-native-vector-icons-ionicons (14.0.0)
+  - react-native-vector-icons-lucide (14.0.0)
+  - react-native-vector-icons-material-design-icons (14.0.0)
+  - react-native-vector-icons-material-icons (14.0.0)
+  - react-native-vector-icons-octicons (22.0.0)
+  - react-native-vector-icons-simple-line-icons (14.0.0)
+  - react-native-vector-icons-zocial (14.0.0)
   - React-NativeModulesApple (0.88.0):
     - hermes-engine
     - React-bridging
@@ -2164,6 +2178,20 @@ DEPENDENCIES:
   - React-microtasksnativemodule (from `../node_modules/react-native/ReactCommon/react/nativemodule/microtasks`)
   - React-mutationobservernativemodule (from `../node_modules/react-native/ReactCommon/react/nativemodule/mutationobserver`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
+  - "react-native-vector-icons-ant-design (from `../node_modules/@react-native-vector-icons/ant-design`)"
+  - "react-native-vector-icons-entypo (from `../node_modules/@react-native-vector-icons/entypo`)"
+  - "react-native-vector-icons-evil-icons (from `../node_modules/@react-native-vector-icons/evil-icons`)"
+  - "react-native-vector-icons-feather (from `../node_modules/@react-native-vector-icons/feather`)"
+  - "react-native-vector-icons-fontawesome (from `../node_modules/@react-native-vector-icons/fontawesome`)"
+  - "react-native-vector-icons-fontisto (from `../node_modules/@react-native-vector-icons/fontisto`)"
+  - "react-native-vector-icons-foundation (from `../node_modules/@react-native-vector-icons/foundation`)"
+  - "react-native-vector-icons-ionicons (from `../node_modules/@react-native-vector-icons/ionicons`)"
+  - "react-native-vector-icons-lucide (from `../node_modules/@react-native-vector-icons/lucide`)"
+  - "react-native-vector-icons-material-design-icons (from `../node_modules/@react-native-vector-icons/material-design-icons`)"
+  - "react-native-vector-icons-material-icons (from `../node_modules/@react-native-vector-icons/material-icons`)"
+  - "react-native-vector-icons-octicons (from `../node_modules/@react-native-vector-icons/octicons`)"
+  - "react-native-vector-icons-simple-line-icons (from `../node_modules/@react-native-vector-icons/simple-line-icons`)"
+  - "react-native-vector-icons-zocial (from `../node_modules/@react-native-vector-icons/zocial`)"
   - React-NativeModulesApple (from `../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios`)
   - React-networking (from `../node_modules/react-native/ReactCommon/react/networking`)
   - React-oscompat (from `../node_modules/react-native/ReactCommon/oscompat`)
@@ -2307,6 +2335,34 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/react/nativemodule/mutationobserver"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
+  react-native-vector-icons-ant-design:
+    :path: "../node_modules/@react-native-vector-icons/ant-design"
+  react-native-vector-icons-entypo:
+    :path: "../node_modules/@react-native-vector-icons/entypo"
+  react-native-vector-icons-evil-icons:
+    :path: "../node_modules/@react-native-vector-icons/evil-icons"
+  react-native-vector-icons-feather:
+    :path: "../node_modules/@react-native-vector-icons/feather"
+  react-native-vector-icons-fontawesome:
+    :path: "../node_modules/@react-native-vector-icons/fontawesome"
+  react-native-vector-icons-fontisto:
+    :path: "../node_modules/@react-native-vector-icons/fontisto"
+  react-native-vector-icons-foundation:
+    :path: "../node_modules/@react-native-vector-icons/foundation"
+  react-native-vector-icons-ionicons:
+    :path: "../node_modules/@react-native-vector-icons/ionicons"
+  react-native-vector-icons-lucide:
+    :path: "../node_modules/@react-native-vector-icons/lucide"
+  react-native-vector-icons-material-design-icons:
+    :path: "../node_modules/@react-native-vector-icons/material-design-icons"
+  react-native-vector-icons-material-icons:
+    :path: "../node_modules/@react-native-vector-icons/material-icons"
+  react-native-vector-icons-octicons:
+    :path: "../node_modules/@react-native-vector-icons/octicons"
+  react-native-vector-icons-simple-line-icons:
+    :path: "../node_modules/@react-native-vector-icons/simple-line-icons"
+  react-native-vector-icons-zocial:
+    :path: "../node_modules/@react-native-vector-icons/zocial"
   React-NativeModulesApple:
     :path: "../node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios"
   React-networking:
@@ -2445,6 +2501,20 @@ SPEC CHECKSUMS:
   React-microtasksnativemodule: 8b3aaa5f3b907ecf071b105589868d9f027a448d
   React-mutationobservernativemodule: 11d77d3f7360578f07847843544ada23cc473049
   react-native-safe-area-context: b1c9f15a36e597e9cef4c5526e209ef2645bc2e0
+  react-native-vector-icons-ant-design: ecd62af13df1263c7aedfe871412bd0c6ddf4b9f
+  react-native-vector-icons-entypo: bd0450b97e06471add0f92fa8aae812e2de359a0
+  react-native-vector-icons-evil-icons: 7b3e009a1287a08fd261be7d9a766cd3146f0b92
+  react-native-vector-icons-feather: 32f485a696f1ac4c3e17216782e7b26475e9e6d4
+  react-native-vector-icons-fontawesome: d62f292e7256c0047d415a1da58955fae1e32162
+  react-native-vector-icons-fontisto: 3f21607e206a288f5d8813cca36a639769b2492a
+  react-native-vector-icons-foundation: b84e59a5d7518f7876f8c4e01096e432b114cffc
+  react-native-vector-icons-ionicons: 5eb068ae5d46f771670147bf2bd08a09d9ad308a
+  react-native-vector-icons-lucide: abb59fda28a8c63f675b700763710816e79c77da
+  react-native-vector-icons-material-design-icons: 811f6c4447a60d8a66394644093dcffdc546772f
+  react-native-vector-icons-material-icons: c62c72e4fa041a49e2cab6c760e4cb5c1343acb3
+  react-native-vector-icons-octicons: fdb4dcf6be46ce0cf98658adc9c343a34e50201b
+  react-native-vector-icons-simple-line-icons: ce56a0aca9a248744a2752bf7eecbf745969ee1a
+  react-native-vector-icons-zocial: 09816d5e40f2fd2d43da390583dded8396447e29
   React-NativeModulesApple: 52f3def085f129de1307e3eb78e26729ff70f421
   React-networking: 1e6441349ac72bfd4f7a79c300c3dd76993a7058
   React-oscompat: e64123dd8199f9e99cede19fa542c3da3445481e
@@ -2492,4 +2562,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: cbcbc7fe10c9d2e539f6e77a3db60cc822e62abe
 
-COCOAPODS: 1.16.2
+COCOAPODS: 1.15.2
