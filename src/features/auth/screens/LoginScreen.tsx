@@ -3,7 +3,10 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import InputField from '../../../components/InputField';
 import AppButton from '../../../components/Button';
 
-export default function LoginScreen() {
+export default function LoginScreen({ navigation }) {
+  const screenNavigator = () => {
+    navigation.navigate('Main', { screen: 'Dashboard' });
+  };
   return (
     <SafeAreaView className={`flex-1`}>
       <View className="mt-6 gap-4 px-5">
@@ -35,7 +38,7 @@ export default function LoginScreen() {
         <AppButton
           title="Back to Login"
           variant="secondary"
-          onPress={() => console.log('')}
+          onPress={screenNavigator()}
         />
       </View>
     </SafeAreaView>

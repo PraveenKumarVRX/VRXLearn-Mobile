@@ -1,5 +1,5 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import AppNavigator from './AppNavigator';
+import AppBottomNavigator from './AppBottomNavigator';
 import AuthNavigator from './AuthNavigator';
 
 const Stack = createNativeStackNavigator();
@@ -14,7 +14,7 @@ export default function RootNavigator() {
       />
       <Stack.Screen
         name="Main"
-        component={AppNavigator}
+        component={AppBottomNavigator}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
