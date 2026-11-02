@@ -5,9 +5,11 @@ import AppButton from '../../../components/Button';
 import AuthLayout from '../../../components/layouts/AuthLayout';
 
 export default function LoginScreen({ navigation }) {
+  const screenNavigator = () => {
+    navigation.navigate('Main', { screen: 'Dashboard' });
+  };
   return (
     <AuthLayout title="Welcome Back!">
-      <KeyboardAvoidingView></KeyboardAvoidingView>
       <View className="mt-6 gap-6 px-5">
         <InputField
           name="Email"
@@ -32,7 +34,7 @@ export default function LoginScreen({ navigation }) {
         <AppButton
           title="Login"
           variant="primary"
-          onPress={() => Alert.alert('Login', ' We are Working on that...')}
+          onPress={() => screenNavigator()}
         />
         <Text>
           Don't have an account?{' '}
