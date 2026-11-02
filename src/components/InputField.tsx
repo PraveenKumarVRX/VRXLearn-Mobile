@@ -18,7 +18,7 @@ function InputField({
   const isPassword = secureTextEntry;
 
   return (
-    <View className="gap-2">
+    <View className="gap-4">
       {/* Label */}
       <Text className="text-h4 font-semibold">{name}</Text>
 

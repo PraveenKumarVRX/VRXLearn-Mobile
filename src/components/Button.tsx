@@ -22,7 +22,7 @@ export default function AppButton({
     <Pressable
       onPress={onPress}
       disabled={disabled || loading}
-      className={`p-2.5 w-full flex-row items-center justify-center rounded-xl border-2 ${
+      className={`py-4 px-3 w-full flex-row items-center justify-center rounded-xl border-2 ${
         isPrimary ? 'border-primary bg-primary' : 'border-primary bg-white'
       } ${disabled || loading ? 'opacity-60' : 'active:opacity-80'}`}
     >

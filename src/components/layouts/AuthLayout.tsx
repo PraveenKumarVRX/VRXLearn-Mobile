@@ -8,6 +8,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 // Types
 type AuthLayoutProps = {
   children: React.ReactNode;
+  title: string;
 };
 
 // Social connect details
@@ -44,8 +45,7 @@ const socialLinks = [
   },
 ];
 
-function AuthLayout({ children }: AuthLayoutProps) {
-  // Open Social linkes function
+function AuthLayout({ children, title, socialLogin = true }: AuthLayoutProps) {
   async function openSocialLinks(url: string) {
     try {
       await Linking.openURL(url);
@@ -53,10 +53,11 @@ function AuthLayout({ children }: AuthLayoutProps) {
       Alert.alert('Unable to open link', 'Please try again later.');
     }
   }
+
   return (
     <SafeAreaView className="flex-1 bg-white dark:bg-slate-900">
       <View className="flex-1 items-center px-4">
-        <View className="w-full max-w-md flex-1 items-center">
+        <View className="w-full max-w-md flex-1">
           {/* Header */}
           <View className="items-center pt-6">
             <Image
@@ -65,38 +66,39 @@ function AuthLayout({ children }: AuthLayoutProps) {
               className="h-28 w-28"
             />
 
-            <Text className="mb-6 mt-4 text-center text-4xl font-bold text-slate-900 dark:text-white">
-              Welcome Back!
+            <Text className="mb-4 mt-3 text-center text-4xl font-bold text-slate-900 dark:text-white">
+              {title}
             </Text>
           </View>
 
-          {/* Dynamic screen content that renders all the auth screens eg. login, singUp, etc.. */}
+          {/* Scrollable Screen Content */}
           <View className="w-full flex-1">{children}</View>
 
-          {/* Footer that renders the Connect with us Icons */}
-          <View className="w-full items-center py-5">
-            <Text className="mb-4 text-sm text-slate-500 dark:text-slate-400">
-              Connect with us
-            </Text>
+          {/* Social Footer */}
+          {socialLogin && (
+            <View className="items-center py-4">
+              <Text className="mb-3 text-sm text-slate-500 dark:text-slate-400">
+                Connect with us
+              </Text>
 
-            <View className="flex-row items-center justify-center gap-5">
-              {socialLinks.map(social => (
-                <Pressable
-                  key={social.key}
-                  accessibilityRole="link"
-                  accessibilityLabel={social.name}
-                  onPress={() => openSocialLinks(social.navlink)}
-                  className="h-12 w-12 items-center justify-center rounded-full border border-slate-200"
-                >
-                  {social.label}
-                </Pressable>
-              ))}
+              <View className="flex-row items-center justify-center gap-5">
+                {socialLinks.map(social => (
+                  <Pressable
+                    key={social.key}
+                    accessibilityRole="link"
+                    accessibilityLabel={social.name}
+                    onPress={() => openSocialLinks(social.navlink)}
+                    className="h-11 w-11 items-center justify-center rounded-full border border-slate-200"
+                  >
+                    {social.label()}
+                  </Pressable>
+                ))}
+              </View>
             </View>
-          </View>
+          )}
         </View>
       </View>
     </SafeAreaView>
   );
 }
-
 export default AuthLayout;

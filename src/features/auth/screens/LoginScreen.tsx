@@ -1,12 +1,14 @@
-import { Alert, Text, View } from 'react-native';
+import { Alert, KeyboardAvoidingView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import InputField from '../../../components/InputField';
 import AppButton from '../../../components/Button';
+import AuthLayout from '../../../components/layouts/AuthLayout';
 
-export default function LoginScreen() {
+export default function LoginScreen({ navigation }) {
   return (
-    <SafeAreaView className={`flex-1`}>
-      <View className="mt-6 gap-4 px-5">
+    <AuthLayout title="Welcome Back!">
+      <KeyboardAvoidingView></KeyboardAvoidingView>
+      <View className="mt-6 gap-6 px-5">
         <InputField
           name="Email"
           placeholder="Enter your email id"
@@ -22,7 +24,7 @@ export default function LoginScreen() {
         />
         <Text
           className="underline"
-          onPress={() => Alert.alert('Screen Will Available Soon...')}
+          onPress={() => navigation.navigate('ForgotPassword')}
         >
           Forgot Passsword?
         </Text>
@@ -30,14 +32,18 @@ export default function LoginScreen() {
         <AppButton
           title="Login"
           variant="primary"
-          onPress={() => console.log('')}
+          onPress={() => Alert.alert('Login', ' We are Working on that...')}
         />
-        <AppButton
-          title="Back to Login"
-          variant="secondary"
-          onPress={() => console.log('')}
-        />
+        <Text>
+          Don't have an account?{' '}
+          <Text
+            className="text-[#0088FF] font-bold"
+            onPress={() => navigation.navigate('Signup')}
+          >
+            Sign up
+          </Text>
+        </Text>
       </View>
-    </SafeAreaView>
+    </AuthLayout>
   );
 }
