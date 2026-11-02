@@ -1,6 +1,5 @@
-import { Alert, Button, Text, View } from 'react-native';
+import { Alert, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { cls } from '../../../theme/classes';
 import InputField from '../../../components/InputField';
 import AppButton from '../../../components/Button';
 
@@ -21,7 +20,6 @@ export default function LoginScreen() {
           icon="lock"
           secureTextEntry
         />
-        {/*<Logo width={90} height={50} />*/}
         <Text
           className="underline"
           onPress={() => Alert.alert('Screen Will Available Soon...')}
@@ -29,8 +27,16 @@ export default function LoginScreen() {
           Forgot Passsword?
         </Text>
 
-        <AppButton title="Login" variant="primary" />
-        <AppButton title="Back to Login" variant="secondary" />
+        <AppButton
+          title="Login"
+          variant="primary"
+          onPress={() => console.log('')}
+        />
+        <AppButton
+          title="Back to Login"
+          variant="secondary"
+          onPress={() => console.log('')}
+        />
       </View>
     </SafeAreaView>
   );
